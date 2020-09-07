@@ -29,7 +29,7 @@ class TheShoppies extends React.Component {
 
   onSearch(event) {
     event.preventDefault();
-    axios.get(`http://www.omdbapi.com/?s=${this.state.searchQuery}&apikey=${process.env.REACT_APP_OMDB_API_KEY}`)
+    axios.get(`https://www.omdbapi.com/?s=${this.state.searchQuery}&apikey=${process.env.REACT_APP_OMDB_API_KEY}`)
       .then (res => {
           if (res.status === HttpStatus.OK) {
               const movies = res.data.Search;
